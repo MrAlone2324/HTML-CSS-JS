@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="icon" href="Profile.png"/>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="Logo.svg" class="logo">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="right">
+                <p>Play/Pause</p>
+                <img src="Play.svg" alt="icon" id="icon">
+            </div>
+        </div>
+    </div>
+    <audio id="Mysong">
+        <source src="Aud.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        var Mysong = document.getElementById("Mysong");
+        var icon = document.getElementById("icon");
+        icon.onclick = function(){
+            if(Mysong.paused){
+                Mysong.play();
+                icon.src = "Pause.svg";
+            }
+            else{
+                Mysong.pause();
+                icon.src = "Play.svg";
+            }
+        }
+    </script>
+</body>
+</html>
